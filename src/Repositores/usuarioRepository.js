@@ -14,9 +14,11 @@ const buscarPeloLogin = async ()=> {
 
 const criar = async ()=> {
     const user = {
-        login:'romario.teste', senha: '123456'
+        nome: 'Nome do Novo Usuário',
+        email: 'novo.email@example.com',
+        senha: 'novaSenha123',
     }
-    return prisma.usuarios.create({
+    return await prisma.usuarios.create({
         data:user
     })
 }

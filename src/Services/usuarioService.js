@@ -5,8 +5,8 @@ const buscar = async()=> {
     return retorno
 }
 
-const criar = async()=>{
-    const resposta = await usuarioRepository.criar()
+const criar = async(credenciais)=>{
+    const resposta = await usuarioRepository.criar(credenciais)
     return resposta
 }
 
